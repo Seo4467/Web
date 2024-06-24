@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISHN chat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>ISHN chat</h1>
+        <nav>
+            <button id="login-btn">Iniciar Sesión</button>
+            <button id="register-btn">Registrarse</button>
+            <button id="logout-btn" style="display:none;">Cerrar Sesión</button>
+        </nav>
+    </header>
+    <main>
+        <section id="auth-section">
+            <div id="login-form" class="auth-form">
+                <h2>Iniciar Sesión</h2>
+                <input type="text" id="login-username" placeholder="Usuario o Correo" required>
+                <input type="password" id="login-password" placeholder="Contraseña" required>
+                <button onclick="login()">Iniciar Sesión</button>
+            </div>
+            <div id="register-form" class="auth-form" style="display:none;">
+                <h2>Registrarse</h2>
+                <input type="text" id="register-username" placeholder="Nombre de Usuario" required>
+                <input type="email" id="register-email" placeholder="Correo Electrónico" required>
+                <input type="tel" id="register-phone" placeholder="Número de Teléfono (opcional)">
+                <input type="password" id="register-password" placeholder="Contraseña" required>
+                <button onclick="register()">Registrarse</button>
+            </div>
+        </section>
+        <section id="chat-section" style="display:none;">
+            <div id="chat-box"></div>
+            <form id="chat-form">
+                <input type="text" id="chat-input" placeholder="Escribe un mensaje..." required>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+        <section id="photo-section" style="display:none;">
+            <form id="upload-form">
+                <input type="file" id="photo-input" accept="image/*" required>
+                <button type="submit">Subir Foto</button>
+            </form>
+            <div id="gallery"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
